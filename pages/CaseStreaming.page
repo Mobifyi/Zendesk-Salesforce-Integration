@@ -1,0 +1,16 @@
+<apex:page >
+    <apex:slds >
+    <apex:includeLightning />
+    <div id="lightning" />
+    <script>
+        $Lightning.use("Zendesk3Embed:CasesStreamingApp", function() {
+          $Lightning.createComponent("Zendesk3Embed:CasesStreaming",
+          {},
+          "lightning",
+          function(cmp) {
+            // do some stuff
+          });
+        });
+    </script>
+    </apex:slds>
+  </apex:page>

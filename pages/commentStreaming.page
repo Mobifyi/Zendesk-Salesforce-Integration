@@ -1,0 +1,17 @@
+<apex:page standardController="Case">
+   
+    <apex:slds >
+    <apex:includeLightning />
+    <div id="lightning" />
+    <script>
+        $Lightning.use("Zendesk3Embed:CaseCommentStreamingApp", function() {
+          $Lightning.createComponent("Zendesk3Embed:CaseCommentsStreaming",
+          { recordId : "{!Case.Id}" },
+          "lightning",
+          function(cmp) {
+            // do some stuff
+          });
+        });
+    </script>
+    </apex:slds>
+  </apex:page>
